@@ -33,8 +33,8 @@ public class RecordStore {
         } 
         //create a master list with all albums in it
         ArrayList<Album> allInventory = new ArrayList<Album>();
-        allInventory.add(lpInventory);
-        allInventory.add(cdInventory);
+        allInventory.addAll(lpInventory);     //add() expects an Album object. addAll() is used to add all of the elements from another ArrayList.
+        allInventory.addAll(cdInventory);
 
         //search fpr any cd or lp that matches a search term
         System.out.println("Enter artist name or title to search for. Works for" +
